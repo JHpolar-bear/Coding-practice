@@ -32,8 +32,9 @@ One thing that trips up almost everyone at the start: Git and GitHub are separat
 
 ## Up to Github
 
-git add: adding item to cart
-This tells Git "include this in my next save", but doesn't save anything permanently.
+1. git add: adding item to cart
+   This tells Git "include this in my next save", but doesn't save anything permanently.
+   This command only records files that have changed.
 
 ```bash
 git add filename.txt # stage one specific file
@@ -41,8 +42,8 @@ git add folder/ # stage everything in a folder
 git add . # stage ALL changed files in the project
 ```
 
-git commit: checking out
-This permanently snapshots everything that has been staged.
+2. git commit: checking out
+   This permanently snapshots everything that has been staged.
 
 ```bash
 git commit -m "Add login page"
@@ -62,4 +63,30 @@ git commit -m "Add email validation to signup"
 
 ```
 
-# Rabbit rabbit bear bear seal
+3. git status: inspect what has changed
+   Output classifies files into three categories: (1) changes not staged for commit; (2) changes to be committed; (3) untracked files that git doesn't know yet.
+
+4. git diff: shows the details of change
+
+5. git log: check the versions of the project
+
+   # show one line only
+
+   git log --oneline
+
+   # show difference of changing
+
+   git long -p <file name>
+
+   # show limited numbers of commits
+
+   git long -n <number of commits>
+
+6. git rm: remove file from project, and record it
+   # delete file or directory
+   git rm <file name>
+   git rm -r <directory name>
+   # cache file
+   git rm --cached
+
+# Rabbit rabbit bear bear seal seal
